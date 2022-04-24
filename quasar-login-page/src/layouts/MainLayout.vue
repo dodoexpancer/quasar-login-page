@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="toolbarFirst">
         <q-btn
           flat
           dense
@@ -12,10 +12,24 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+         Expancer Snikeers
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <div class="q-pa-md">
+    <q-btn-dropdown color="primary" label="Seja Bem-Vindo" no-caps>
+      <q-list>
+        <q-item clickable v-close-popup @click="cadastrarInterno">
+          <q-item-section>
+            <q-item-label>Cadastrar</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item clickable v-close-popup @click="loginInterno">
+          <q-item-section>
+            <q-item-label>Fazer Login</q-item-label>
+          </q-item-section>
+        </q-item>
+      </q-list>
+    </q-btn-dropdown>
+  </div>
       </q-toolbar>
     </q-header>
 
@@ -48,6 +62,8 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
+
+
 
 const linksList = [
   {
@@ -94,6 +110,8 @@ const linksList = [
   }
 ];
 
+let usuario = 'Visitante'
+
 export default defineComponent({
   name: 'MainLayout',
 
@@ -102,11 +120,13 @@ export default defineComponent({
   },
 
   setup () {
+
     const leftDrawerOpen = ref(false)
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
+      usuario,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
       }
@@ -114,3 +134,8 @@ export default defineComponent({
   }
 });
 </script>
+<style>
+.toolbarFirst{
+  background-color: cornflowerblue;
+}
+</style>
