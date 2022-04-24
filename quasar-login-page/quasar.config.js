@@ -144,8 +144,8 @@ module.exports = configure(function (ctx) {
       // chainWebpackCustomSW (/* chain */) {},
 
       manifest: {
-        name: ' Login App',
-        short_name: ' Login App',
+        name: 'Quasar App',
+        short_name: 'Quasar App',
         description: '',
         display: 'standalone',
         orientation: 'portrait',
@@ -211,7 +211,7 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'quasar-login'
+        appId: 'quasar-login-page'
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain

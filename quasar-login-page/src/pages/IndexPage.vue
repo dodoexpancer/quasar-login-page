@@ -1,10 +1,5 @@
 <template>
   <q-page class="row items-center justify-evenly">
-   <q-input
-   model-value=""
-   >
-
-   </q-input>
     <example-component
       title="Example component"
       active

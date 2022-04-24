@@ -1,6 +1,6 @@
-#  Login App (quasar-login)
+# Quasar App (quasar-login-page)
 
-A Quasar Project
+Project Portifoly page
 
 ## Install the dependencies
 ```bash
