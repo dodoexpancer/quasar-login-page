@@ -10,19 +10,19 @@
           <q-tab name="login" label="Login"/>
         </q-tabs>
       </q-toolbar>
-      <forms-login-component v-if="model === 'cadastrar'">
-
-      </forms-login-component>
+      <forms-cadastro v-if="model === 'cadastrar'">
+      </forms-cadastro>
+      <forms-login v-if="model === 'login'">
+      </forms-login>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref } from 'vue';
-import FormsLoginComponent from './components/Formslogin.vue';
+import FormsCadastro from './components/FormsCadastro.vue';
+import FormsLogin from './components/FormsLogin.vue';
 
 const model = ref<string>('login');
-
 </script>
 
 <style>

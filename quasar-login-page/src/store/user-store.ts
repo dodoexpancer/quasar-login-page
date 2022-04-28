@@ -9,13 +9,22 @@ export type User = {
     celular: string,
     senhaOne: string,
     senhaTwo: string
+    accept: boolean,
+}
+
+export type Login = {
+    user: string,
+    senha: string,
 }
 
 export const useUsuarioStore = defineStore('usuario', {
   state: () => ({
-    usuario: {} as User,
+    cadastro: { accept: false } as User,
+    login: {} as Login,
+
   }),
   getters: {
-    get_usuario: (state) => state.usuario,
+    get_cadastro: (state) => state.cadastro,
+    get_login: (state) => state.login,
   },
 });

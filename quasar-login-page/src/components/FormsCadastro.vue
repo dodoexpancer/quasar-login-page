@@ -1,12 +1,10 @@
 <template>
-  <div class="cardOne" style="align-items: center; max-width: 500vh">
+  <div class="cardOne" style="align-items: center; max-width: 200vh">
     <q-form
-        @submit="onSubmit"
-        @reset="onReset"
         class="q-gutter-md"
     >
       <q-input rounded
-               v-model="user.get_usuario.nome"
+               v-model="user.get_cadastro.nome"
                label="Nome Completo*"
                filled
                lazy-rules
@@ -14,27 +12,27 @@
       <q-input filled
                lazy-rules
                rounded
-               v-model="user.cpf"
+               v-model="user.get_cadastro.cpf"
                label="CPF*"
                :rules="[ val => val && val.length > 0 || 'CPF Obrigatorio']"
                mask="###.###.###-##"/>
       <q-input filled
                lazy-rules
                rounded
-               v-model="user.rg"
+               v-model="user.get_cadastro.rg"
                label="RG"
                :rules="[ val => val && val.length > 0 || 'RG Obrigatorio']"
                mask="##.###.###"/>
       <q-input filled
                lazy-rules
                rounded
-               v-model="user.email"
+               v-model="user.get_cadastro.email"
                :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
                label="Email"/>
       <q-input filled
                lazy-rules
                rounded
-               v-model="user.emailRepet"
+               v-model="user.get_cadastro.emailRepet"
                :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
                label="Digite novamente o Email"/>
       <q-input filled
@@ -42,26 +40,26 @@
                rounded
                ounded
                mask="(##) #####-####"
-               v-model="user.celular"
-               label="Celular"/>
+               v-model="user.get_cadastro.celular"
+               label="Celular*"/>
       <q-input filled
                lazy-rules
                rounded
-               v-model="user.senhaOne"
-               label="Digite uma senha"/>
+               v-model="user.get_cadastro.senhaOne"
+               label="Digite uma senha*"/>
       <q-input rounded
                filled
                lazy-rules
-               v-model="user.senhaTwo"
-               label="Digite novamente a mesma Senha"/>
-      <q-toggle v-model="user.accept"
-                label="Eu aceito os termos"
+               v-model="user.get_cadastro.senhaTwo"
+               label="Digite novamente a mesma Senha*"/>
+      <q-toggle v-model="user.get_cadastro.accept"
+                label="Eu aceito os termos*"
                 :value="true"/>
       <br/>
       <div>
         <q-btn icon="fab fa-solid fa-bomb"
                class="#483D8B text-primary"
-               :disable="!user.accept"
+               :disable="!user.get_cadastro.accept"
                @click.prevent="puxar"
                label="Avançar"/>
         <q-btn @click.prevent="puxar"
@@ -88,12 +86,6 @@ export default defineComponent({
     const user = useUsuarioStore();
     return { user };
   },
-  methods: {
-    puxar() {
-      const user = useUsuarioStore();
-    },
-  },
-
 });
 
 </script>
