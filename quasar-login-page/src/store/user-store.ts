@@ -1,5 +1,4 @@
-import {defineStore} from 'pinia';
-import {ref} from "vue";
+import { defineStore } from 'pinia';
 
 export type User = {
     nome: string,
@@ -13,29 +12,10 @@ export type User = {
 }
 
 export const useUsuarioStore = defineStore('usuario', {
-    state: () => ({
-        nome: ref<string>(),
-        cpf: ref<number>(),
-        rg: ref<string>(),
-        email: ref<string>(),
-        emailRepet: ref<string>(),
-        celular: ref<string>(),
-        senhaOne: ref<string>(),
-        senhaTwo: ref<string>(),
-        accept: ref<boolean>(false),
-    }),
-
-    getters: {
-        getUser(state) {
-            return [
-                state.nome,
-                state.cpf,
-                state.rg,
-                state.celular,
-                state.email,
-                state.emailRepet,
-                state.senhaOne,
-                state.senhaTwo]
-        },
-    }
+  state: () => ({
+    usuario: {} as User,
+  }),
+  getters: {
+    get_usuario: (state) => state.usuario,
+  },
 });

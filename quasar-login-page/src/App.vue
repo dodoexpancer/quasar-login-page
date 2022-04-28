@@ -1,19 +1,19 @@
 <template>
   <div class="container">
     <div class="div">
-    <q-toolbar  class="fixed-top left text-blue-grey-14 shadow-2">
-      <q-btn flat round dense icon="menu" class="q-mr-sm" />
-      <q-space />
-      <q-tabs v-model="model" @click="model" shrink>
-        <q-tab icon="fa-solid fa-house" name="home"/>
-        <q-tab name="cadastrar" label="Cadastrar" />
-        <q-tab name="login" label="Login" />
-      </q-tabs>
-    </q-toolbar>
-    <forms-login-component v-if="model === 'cadastrar'">
+      <q-toolbar class="toolbarStyled fixed-top left text-blue-grey-14 shadow-2 ">
+        <q-btn flat round dense icon="menu" class="q-mr-sm"/>
+        <q-space/>
+        <q-tabs v-model="model" @click="model" shrink>
+          <q-tab icon="fa-solid fa-house" name="home"/>
+          <q-tab name="cadastrar" label="Cadastrar"/>
+          <q-tab name="login" label="Login"/>
+        </q-tabs>
+      </q-toolbar>
+      <forms-login-component v-if="model === 'cadastrar'">
 
-    </forms-login-component>
-  </div>
+      </forms-login-component>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -27,13 +27,18 @@ const model = ref<string>('login');
 
 <style>
 
+.toolbarStyled {
+  background: hsl(0deg 0% 100%);
+  z-index: 1;
+}
+
 .container {
   background-color: #eeeeee;
   color: #56e8f2;
   min-height: 100vh;
 }
 
-.div{
+.div {
   margin: auto;
   max-height: 800px;
   max-width: 800px;

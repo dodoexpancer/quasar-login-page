@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 
-import Formslogin from './components/Formslogin.vue'
+import Formslogin from './components/Formslogin.vue';
 </script>
 
 <style scoped>

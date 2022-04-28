@@ -6,7 +6,7 @@
         class="q-gutter-md"
     >
       <q-input rounded
-               v-model="user.nome"
+               v-model="user.get_usuario.nome"
                label="Nome Completo*"
                filled
                lazy-rules
@@ -15,28 +15,33 @@
                lazy-rules
                rounded
                v-model="user.cpf"
-               label="CPF"
+               label="CPF*"
+               :rules="[ val => val && val.length > 0 || 'CPF Obrigatorio']"
                mask="###.###.###-##"/>
       <q-input filled
                lazy-rules
                rounded
                v-model="user.rg"
                label="RG"
+               :rules="[ val => val && val.length > 0 || 'RG Obrigatorio']"
                mask="##.###.###"/>
       <q-input filled
                lazy-rules
                rounded
                v-model="user.email"
+               :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
                label="Email"/>
       <q-input filled
                lazy-rules
                rounded
                v-model="user.emailRepet"
+               :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
                label="Digite novamente o Email"/>
       <q-input filled
                lazy-rulesr
                rounded
                ounded
+               mask="(##) #####-####"
                v-model="user.celular"
                label="Celular"/>
       <q-input filled
@@ -54,18 +59,18 @@
                 :value="true"/>
       <br/>
       <div>
-      <q-btn icon="fab fa-solid fa-bomb"
-             class="#483D8B text-primary"
-             :disable="!user.accept"
-             @click.prevent="puxar"
-             label="Avançar"/>
-      <q-btn @click.prevent="puxar"
-             label="Cancelar"
-             type="reset"
-             color="primary"
-             flat
-             class="q-ml-sm"/>
-        </div>
+        <q-btn icon="fab fa-solid fa-bomb"
+               class="#483D8B text-primary"
+               :disable="!user.accept"
+               @click.prevent="puxar"
+               label="Avançar"/>
+        <q-btn @click.prevent="puxar"
+               label="Cancelar"
+               type="reset"
+               color="primary"
+               flat
+               class="q-ml-sm"/>
+      </div>
     </q-form>
   </div>
 
@@ -86,7 +91,6 @@ export default defineComponent({
   methods: {
     puxar() {
       const user = useUsuarioStore();
-      console.log(user.getUser);
     },
   },
 
@@ -97,11 +101,9 @@ export default defineComponent({
 .cardOne {
   elevation: unset;
   color: #686868;
-  min-height: 100vh;
-  max-height: 200vh;
   max-width: 100vh;
   align-items: baseline;
-  margin: 50px 100px 50px 100px;
+  padding-top: 100px;
 }
 
 .inputText {
