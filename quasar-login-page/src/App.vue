@@ -1,6 +1,7 @@
 <template>
-  <div class="fixed-top">
-    <q-toolbar  class="left text-primary shadow-2">
+  <div class="container">
+    <div class="div">
+    <q-toolbar  class="fixed-top left text-blue-grey-14 shadow-2">
       <q-btn flat round dense icon="menu" class="q-mr-sm" />
       <q-space />
       <q-tabs v-model="model" @click="model" shrink>
@@ -9,39 +10,35 @@
         <q-tab name="login" label="Login" />
       </q-tabs>
     </q-toolbar>
-  </div>
-
-  <div class="divOne">
-    <div>
-    <forms-login-component>
+    <forms-login-component v-if="model === 'cadastrar'">
 
     </forms-login-component>
-    </div>
   </div>
-
+  </div>
 </template>
 <script setup lang="ts">
-const model = ref<string>('login')
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import FormsLoginComponent from './components/Formslogin.vue'
-import { ref } from 'vue'
+import { ref } from 'vue';
+import FormsLoginComponent from './components/Formslogin.vue';
+
+const model = ref<string>('login');
 
 </script>
 
 <style>
 
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.container {
+  background-color: #eeeeee;
+  color: #56e8f2;
+  min-height: 100vh;
 }
 
-.divOne{
-  margin: 50px 200px 50px 200px;
+.div{
+  margin: auto;
+  max-height: 800px;
+  max-width: 800px;
+  padding: 10px;
+  box-decoration-break: clone;
 }
 
 .box {

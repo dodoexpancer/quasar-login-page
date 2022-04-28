@@ -22,6 +22,7 @@ export const useUsuarioStore = defineStore('usuario', {
         celular: ref<string>(),
         senhaOne: ref<string>(),
         senhaTwo: ref<string>(),
+        accept: ref<boolean>(false),
     }),
 
     getters: {
