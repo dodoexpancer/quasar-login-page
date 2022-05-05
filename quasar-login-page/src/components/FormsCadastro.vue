@@ -1,14 +1,19 @@
 <template>
-  <div class="cardOne" style="align-items: center; max-width: 200vh">
-    <q-card>
+  <div class="cardOne">
+    <q-card class="card-0">
       <q-card-section>
-        <q-form
-            class="q-gutter-md"
-        >
+        <div class="d-flex">
+          <q-img style="height: 80px; width: 80px; position: center"
+                 src="src/assets/icons8-myspace-100.png"/>
+        </div>
+      </q-card-section>
+      <q-card-section>
+        <q-form>
           <q-input rounded
                    v-model="user.get_cadastro.nome"
                    label="Nome Completo*"
                    filled
+                   small
                    lazy-rules
                    :rules="[ val => val && val.length > 0 || 'Nome Obrigatorio']"/>
           <q-input filled
@@ -22,7 +27,7 @@
                    lazy-rules
                    rounded
                    v-model="user.get_cadastro.rg"
-                   label="RG"
+                   label="RG*"
                    :rules="[ val => val && val.length > 0 || 'RG Obrigatorio']"
                    mask="##.###.###"/>
           <q-input filled
@@ -30,33 +35,37 @@
                    rounded
                    v-model="user.get_cadastro.email"
                    :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
-                   label="Email"/>
+                   label="Email*"/>
           <q-input filled
                    lazy-rules
                    rounded
                    v-model="user.get_cadastro.emailRepet"
                    :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
-                   label="Digite novamente o Email"/>
+                   label="Digite novamente o Email*"/>
           <q-input filled
                    lazy-rulesr
                    rounded
                    ounded
                    mask="(##) #####-####"
+                   :rules="[ val => val && val.length > 0 || 'Celular Obrigatorio']"
                    v-model="user.get_cadastro.celular"
                    label="Celular*"/>
           <q-input filled
                    lazy-rules
                    rounded
                    v-model="user.get_cadastro.senhaOne"
-                   label="Digite uma senha*"/>
+                   :rules="[ val => val && val.length > 0 || 'Senha Obrigatoria']"
+                   label="Insira uma senha*"/>
           <q-input rounded
                    filled
                    lazy-rules
                    v-model="user.get_cadastro.senhaTwo"
-                   label="Digite novamente a mesma Senha*"/>
+                   :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
+                   label="Insira novamente a senha*"/>
+
           <q-toggle v-model="user.get_cadastro.accept"
                     label="Eu aceito os termos*"
-                    :value="true"/>
+                    :value="true" model-value="string"/>
         </q-form>
       </q-card-section>
       <q-card-actions>
@@ -94,16 +103,21 @@ export default defineComponent({
 });
 
 </script>
-<style>
+<style scoped lang="scss">
 .cardOne {
-  elevation: unset;
-  color: #686868;
-  max-width: 100vh;
-  align-items: baseline;
-  padding-top: 100px;
+  padding: 100px 100px 100px 150px;
 }
 
-.inputText {
-  text-align-last: center;
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.card-0 {
+  padding: 0px 100px 40px 90px;
+  width: 500px;
+  height: 850px;
+}
+
 </style>
