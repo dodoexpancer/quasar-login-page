@@ -40,19 +40,39 @@
               @click.prevent="puxar"
               label=" Login"
           />
-          <q-btn @click.prevent="puxar"
-                 label="Cancelar"
-                 type="reset"
-                 color="primary"
-                 flat
-                 class="q-ml-sm"/>
-        </div>
-        <div>
-          <q-img
-              style="height: 32px; width: 32px"
-              src="src/assets/icons8-whatsapp.gif"/>
+          <q-btn
+              @click.prevent="puxar"
+              label="Cancelar"
+              type="reset"
+              color="primary"
+              flat
+              class="q-ml-sm"/>
         </div>
       </q-card-actions>
+      <q-card-actions align="right">
+        <q-separator inset size="40px"/>
+        <div class="col-4">
+          <q-btn
+              icon="fa-brands fa-whatsapp"
+              color="primary"
+          />
+        </div>
+        <br/>
+        <div>
+          <q-btn
+              icon="fa-brands fa-instagram"
+              color="primary"
+          />
+        </div>
+        <br/>
+        <div>
+          <q-btn
+              icon="fa-brands fa-twitter"
+              color="primary"
+          />
+        </div>
+      </q-card-actions>
+
     </q-card>
   </div>
 </template>
