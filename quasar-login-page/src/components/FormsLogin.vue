@@ -1,8 +1,8 @@
 <template>
-  <div class="cardOne" style="align-items: center; max-width: 500vh">
-    <q-card>
+  <div class="div-10">
+    <q-card class="card-10">
       <q-card-section>
-        <div class="d-flex">
+        <div class="div-11">
           <q-img
               style="height: 100px; width: 100px; position: center"
               src="src/assets/icons8-myspace-100.png"/>
@@ -10,18 +10,18 @@
       </q-card-section>
       <q-card-section>
         <q-form
-            class="q-gutter-md"
         >
           <q-input
+              dense
               rounded
-              v-model="login.get_login.user"
-              label="Login"
+              v-model="login.user"
+              label="Email"
               filled
-              lazy-rules
               :rules="[ val => val && val.length > 0 || 'Usuario Obrigatorio']"/>
           <q-input
+              dense
               rounded
-              v-model="login.get_login.senha"
+              v-model="login.senha"
               label="Senha"
               filled
               lazy-rules
@@ -47,37 +47,41 @@
                  flat
                  class="q-ml-sm"/>
         </div>
-
+        <div>
+          <q-img
+              style="height: 32px; width: 32px"
+              src="src/assets/icons8-whatsapp.gif"/>
+        </div>
       </q-card-actions>
     </q-card>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 // eslint-disable-next-line import/extensions,import/no-unresolved
 import { useUsuarioStore } from '../store/user-store';
 
-export default defineComponent({
-  name: 'FormsLogin.vue',
-
-  setup() {
-    const login = useUsuarioStore();
-    return { login };
-  },
-});
+const login = ref(useUsuarioStore());
 
 </script>
 
 <style scoped lang="scss">
-.d-flex {
+.div-10 {
+  padding: 150px 150px 150px 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-10 {
+  width: 400px;
+  height: 500px;
+}
+
+.div-11 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.cardOne {
-  padding: 100px 100px 100px 150px;
-}
-
 </style>

@@ -4,6 +4,7 @@ export type User = {
     nome: string,
     cpf: number,
     rg: string,
+    dataNascimento: string,
     email: string,
     emailRepet: string,
     celular: string,

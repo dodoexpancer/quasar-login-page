@@ -1,8 +1,8 @@
 <template>
-  <div class="cardOne">
-    <q-card class="card-0">
+  <div class="div-20">
+    <q-card class="card-20">
       <q-card-section>
-        <div class="d-flex">
+        <div class="div-21">
           <q-img style="height: 80px; width: 80px; position: center"
                  src="src/assets/icons8-myspace-100.png"/>
         </div>
@@ -10,6 +10,7 @@
       <q-card-section>
         <q-form>
           <q-input rounded
+                   dense
                    v-model="user.get_cadastro.nome"
                    label="Nome Completo*"
                    filled
@@ -17,6 +18,7 @@
                    lazy-rules
                    :rules="[ val => val && val.length > 0 || 'Nome Obrigatorio']"/>
           <q-input filled
+                   dense
                    lazy-rules
                    rounded
                    v-model="user.get_cadastro.cpf"
@@ -24,6 +26,7 @@
                    :rules="[ val => val && val.length > 0 || 'CPF Obrigatorio']"
                    mask="###.###.###-##"/>
           <q-input filled
+                   dense
                    lazy-rules
                    rounded
                    v-model="user.get_cadastro.rg"
@@ -31,7 +34,16 @@
                    :rules="[ val => val && val.length > 0 || 'RG Obrigatorio']"
                    mask="##.###.###"/>
           <q-input filled
+                   dense
                    lazy-rules
+                   rounded
+                   v-model="user.get_cadastro.dataNascimento"
+                   label="Data de Nascimento*"
+                   :rules="[ val => val && val.length > 0 || 'Data de Nascimento Obrigatorio']"
+                   mask="##/##/####"/>
+          <q-input filled
+                   lazy-rules
+                   dense
                    rounded
                    v-model="user.get_cadastro.email"
                    :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
@@ -39,12 +51,14 @@
           <q-input filled
                    lazy-rules
                    rounded
+                   dense
                    v-model="user.get_cadastro.emailRepet"
                    :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
                    label="Digite novamente o Email*"/>
           <q-input filled
                    lazy-rulesr
                    rounded
+                   dense
                    ounded
                    mask="(##) #####-####"
                    :rules="[ val => val && val.length > 0 || 'Celular Obrigatorio']"
@@ -52,6 +66,7 @@
                    label="Celular*"/>
           <q-input filled
                    lazy-rules
+                   dense
                    rounded
                    v-model="user.get_cadastro.senhaOne"
                    :rules="[ val => val && val.length > 0 || 'Senha Obrigatoria']"
@@ -59,6 +74,7 @@
           <q-input rounded
                    filled
                    lazy-rules
+                   dense
                    v-model="user.get_cadastro.senhaTwo"
                    :rules="[ val => val && val.length > 0 || 'Email Obrigatorio']"
                    label="Insira novamente a senha*"/>
@@ -104,20 +120,20 @@ export default defineComponent({
 
 </script>
 <style scoped lang="scss">
-.cardOne {
-  padding: 100px 100px 100px 150px;
+.div-20 {
+  padding: 80px 80px 80px 80px;
+  display: flex;
+  justify-content: center;
 }
 
-.d-flex {
+.card-20 {
+  width: 700px;
+  height: 800px;
+}
+
+.div-21 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.card-0 {
-  padding: 0px 100px 40px 90px;
-  width: 500px;
-  height: 850px;
-}
-
 </style>
