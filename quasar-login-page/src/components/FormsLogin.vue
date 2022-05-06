@@ -34,43 +34,44 @@
       </q-card-section>
       <q-card-actions>
         <div>
-          <q-btn
-              icon="fab fa-solid fa-bomb"
-              class="#483D8B text-primary"
-              @click.prevent="puxar"
-              label=" Login"
-          />
-          <q-btn
-              @click.prevent="puxar"
-              label="Cancelar"
-              type="reset"
-              color="primary"
-              flat
-              class="q-ml-sm"/>
+          <div class="col-0">
+            <q-btn
+                icon="fab fa-solid fa-bomb"
+                class="#483D8B text-primary"
+                @click.prevent="puxar"
+                label=" Login"
+            />
+          </div>
         </div>
+          </q-card-actions>
+      <q-separator spaced inset/>
+          <q-card-actions class="justify-end absolute-bottom">
+            <div class="row">
+              <div>
+                <q-btn
+                    align="right"
+                    icon="fa-brands fa-whatsapp"
+                    color="primary"
+                />
+              </div>
+              <div >
+                <q-btn
+                    align="center"
+                    icon="fa-brands fa-instagram"
+                    color="primary"
+                />
+              </div>
+              <div >
+                <q-btn
+                    align="left"
+                    icon="fa-brands fa-twitter"
+                    color="primary"
+                />
+              </div>
+            </div>
       </q-card-actions>
       <q-card-actions align="right">
-        <q-separator inset size="40px"/>
-        <div class="col-4">
-          <q-btn
-              icon="fa-brands fa-whatsapp"
-              color="primary"
-          />
-        </div>
-        <br/>
-        <div>
-          <q-btn
-              icon="fa-brands fa-instagram"
-              color="primary"
-          />
-        </div>
-        <br/>
-        <div>
-          <q-btn
-              icon="fa-brands fa-twitter"
-              color="primary"
-          />
-        </div>
+
       </q-card-actions>
 
     </q-card>
@@ -96,7 +97,7 @@ const login = ref(useUsuarioStore());
 
 .card-10 {
   width: 400px;
-  height: 500px;
+  height: 420px;
 }
 
 .div-11 {

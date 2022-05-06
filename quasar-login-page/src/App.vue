@@ -14,7 +14,7 @@
         </q-tabs>
       </q-toolbar>
     </q-header>
-    <q-drawer v-model="drawer" side="left" bordered>
+    <q-drawer v-model="drawer" side="left" bordered behavior="desktop">
       <!-- drawer content -->
     </q-drawer>
     <forms-cadastro v-if="model === 'cadastrar'">
@@ -29,7 +29,7 @@ import FormsCadastro from './components/FormsCadastro.vue';
 import FormsLogin from './components/FormsLogin.vue';
 
 const drawer = ref(false);
-const model = ref('home');
+const model = ref('login');
 </script>
 
 <style scoped lang="scss">

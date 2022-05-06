@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="967b2685-62cb-4e7e-a99f-fd37f081af43" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/components/FormsCadastro.vue" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/src/components/FormsCadastro.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/components/FormsLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/src/components/FormsLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/src/env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/plugins/quasar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/src/plugins/quasar/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/plugins/quasar/options.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/src/plugins/quasar/options.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/store/user-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/src/store/user-store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/src/views/MainPage.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quasar-login-page/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasar-login-page/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +24,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/quasar-login-page/package.json" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/quasar-login-page" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\doneves\OneDrive - Capgemini\Documents\GitHub\quasar-login-page\quasar-login-page\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -67,6 +58,9 @@
       <option name="presentableId" value="Default" />
       <updated>1651785043873</updated>
       <workItem from="1651785051900" duration="1341000" />
+      <workItem from="1651786622794" duration="53000" />
+      <workItem from="1651786724106" duration="21000" />
+      <workItem from="1651786766231" duration="48000" />
     </task>
     <servers />
   </component>
